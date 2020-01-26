@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/head.ejs",{}) %>
+</head>
+<body class="container">
+
+
+<main>
+    <div class="jumbotron">
+        <h1><%= tagline %></h1>
+        <p>Welcome to templating using EJS</p>
+    </div>
+    <table>
+        <thead>
+            <tr><th>Language</th><th>Popularity</th></tr>
+        </thead>
+        <tbody>
+            <% for(let entry of languages) {%>
+                <tr><td> <%= entry.name %> </td> <td><%= entry.popularity %></td></tr> 
+            <% } %>
+        </tbody>
+    </table>
+</main>
+
+<footer>
+    <%- include ("../partials/footer.ejs",{}) %>
+</footer>
+
+</body>
+</html>
